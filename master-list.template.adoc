@@ -1,0 +1,90 @@
+= Code alignment for component names and attributes
+
+This file displays the code from different repos associated with component names and attributes associated with that component.
+
+Edit this file to point to particular branches if you want to see the alignment of component code for those branches.
+
+Run the following command to generate a web page:
+----
+asciidoctor -a allow-uri-read master-list.template.adoc 
+----
+
+:git-host: https://raw.githubusercontent.com
+
+:webapp-repo: finp/tutorial-web-app
+:webapp-branch: master-list
+:webapp-file: src/product-info.js
+
+:docs-repo: ../user-documentation
+:docs-branch: 
+
+:walkthrough-repo: ../tutorial-web-app-walkthroughs
+:walkthrough-branch:
+
+:installation-repo: finp/installation
+:installation-branch: master-list
+:installation-file: evals/inventories/group_vars/all/manifest.yaml
+
+[cols="a,a,a"]
+|===
+|{webapp-repo}
+|{installation-repo}
+|
+
+| Wep app does not refer to itself, installation version displayed for ref only.
+|
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=webapp]
+----
+|
+
+
+| include::{git-host}/{webapp-repo}/{webapp-branch}/{webapp-file}[tags=amq-online]
+|
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=amq-online]
+----
+
+|
+
+| include::{git-host}/{webapp-repo}/{webapp-branch}/{webapp-file}[tags=fuse-online]
+|
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=fuse-online]
+----
+
+|
+
+| include::{git-host}/{webapp-repo}/{webapp-branch}/{webapp-file}[tags=codeready]
+|
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=codeready]
+----
+
+|
+
+
+| include::{git-host}/{webapp-repo}/{webapp-branch}/{webapp-file}[tags=launcher]
+|
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=launcher]
+----
+
+|
+
+| include::{git-host}/{webapp-repo}/{webapp-branch}/{webapp-file}[tags=three-scale]
+| 
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=three-scale]
+----
+|
+
+| include::{git-host}/{webapp-repo}/{webapp-branch}/{webapp-file}[tags=apicurito]
+|
+----
+include::{git-host}/{installation-repo}/{installation-branch}/{installation-file}[tags=apicurito]
+----
+
+|
+
+|===
