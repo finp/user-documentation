@@ -7,9 +7,13 @@ Primarily focused on RHMI users, there is also lots of useful info for Integreat
 
 This repo can also be used to populate your cluster with user documentation solution patterns.
 
+Add the repo to your cluster:
 
-To preview the walkthroughs locally with 
+----
+https://github.com/finp/user-documentation.git
+----
 
+To preview the walkthroughs locally with Solution Explorer:
 
 ----
 # Clone the Solution Explorer
