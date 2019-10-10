@@ -1,0 +1,7 @@
+//:PRODUCT: Integreatly
+
+:PRODUCT: Red Hat Managed Integration
+:walkthrough-name: Solution Pattern
+
+
+include::../modules/ROOT/pages/_partials/gs-writing-walkthroughs-proc.adoc[leveloffset=+1]

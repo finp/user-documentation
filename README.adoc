@@ -1,0 +1,29 @@
+= User Documentation for RHMI users
+
+Primarily focused on RHMI users, there is also lots of useful info for Integreatly users.
+
+
+== Solution Patterns (aka Walkthroughs)
+
+This repo can also be used to populate your cluster with user documentation solution patterns.
+
+
+To preview the walkthroughs locally with 
+
+
+----
+# Clone the Solution Explorer
+git clone https://github.com/integr8ly/tutorial-web-app
+
+# Clone this lab in the same directory as the Solution Explorer
+git clone https://github.com/finp/user-documentation
+
+# Set WALKTHROUGH_LOCATIONS variable the Solution Explorer needs
+export WALKTHROUGH_LOCATIONS=$(pwd)/user-documentation/walkthroughs
+
+# Start the Solution Explorer at http://localhost:3006
+cd tutorial-web-app
+yarn install
+yarn start:dev
+
+----
