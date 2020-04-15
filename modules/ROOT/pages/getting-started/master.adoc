@@ -26,19 +26,21 @@
 :cluster-administrator: cluster administrator
 :cluster-developer: developer
 
-//:rhmi-sso-name: Managed Integration SSO instance
+:unifiedpush-service: Push Notifications
 :customer-sso-name: Customer Application SSO instance
 :rhsso-name: Red Hat Single Sign-On
+:rhsso-short-name: RH SSO
 
 :openshift-client-url: https://access.redhat.com/downloads/content/290/ver=4.3/rhel---8/4.3.5/x86_64/product-software
 
 :fuse-name: Red Hat Fuse Online
-:fuse-version: 7.5
+:fuse-version: 7.6
 :fuse-docs: https://access.redhat.com/documentation/en-us/red_hat_fuse/{fuse-version}/
 :fuse-configs: https://access.redhat.com/articles/310603
+:fuse-short-name: Fuse Online
 
 :amq-online-name: Red Hat AMQ Online
-:amq-online-version: 1.3
+:amq-online-version: 1.4
 :amq-online-docs: https://access.redhat.com/documentation/en-us/red_hat_amq/
 :amq-online-configs: https://access.redhat.com/articles/2791941
 
@@ -46,9 +48,9 @@
 :three-scale-version: 2.8
 :three-scale-docs: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/
 :three-scale-configs: https://access.redhat.com/articles/2798521
+:three-scale-service-discovery: https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/service-discovery
 
-:code-ready-name: Red Hat CodeReady Workspaces for OpenShift
-:code-ready-short: CodeReady Workspaces
+:code-ready-name: Red Hat CodeReady Workspaces
 :code-ready-version: 2.0
 :code-ready-docs: https://access.redhat.com/documentation/en-us/red_hat_codeready_workspaces/{code-ready-version}/
 :code-ready-configs: N/A
@@ -102,7 +104,7 @@ It is hosted and managed by Red Hat so you can focus on building applications, n
 All of the applications and services are protected by your identity provider.
 
 {PRODUCT_SHORT} includes a managed instance of {rhsso-name} to enable you to protect any applications you deploy on your cluster.
-This application is labeled *{customer-sso-name}* in the Solution Explorer
+This application is labeled *{customer-sso-name}* in the Solution Explorer.
 
 NOTE: Do not delete the `admin` user in the {customer-sso-name}. This user is required by Red Hat to manage the instance.
 
@@ -142,7 +144,7 @@ The {webapp} is a web-based UI with single sign-on access to all the application
 
 * *Red Hat Single Sign-On*, a single sign-on solution for web apps and RESTful web services.
 
-The {webapp} also provides xref:what-are-solution-patterns[Solution Patterns] that provide step-by-step instructions and best practices for common connectivity and application development tasks.
+The {webapp} also provides xref:introduction-to-solution-patterns[Solution Patterns] that provide step-by-step instructions and best practices for common connectivity and application development tasks.
 
 
 
@@ -158,7 +160,7 @@ The {webapp} also provides xref:what-are-solution-patterns[Solution Patterns] th
 // UserStory:
 // VerifiedInVersion:
 
-[id="what-are-solution-patterns"]
+[id="introduction-to-solution-patterns"]
 = Introduction to Solution Patterns
 //In the title of concept modules, include nouns or noun phrases that are used in the body text. This helps readers and search engines find the information quickly.
 //Do not start the title of concept modules with a verb. See also _Wording of headings_ in _The IBM Style Guide_.
@@ -195,7 +197,7 @@ A {cluster-administrator} must configure the {PRODUCT_SHORT} cluster before {clu
 
 :leveloffset!:
 
-Depending on the applications that your team plans to use, you might need to configure a GitHub OAuth app for {code-ready-name} and give {cluster-developer}s administrative priviledges in {three-scale-name}.
+Depending on the applications that your team plans to use, you might need to configure a GitHub OAuth app for {code-ready-name} and give {cluster-developer}s administrative privileges in {three-scale-name}.
 
 :leveloffset: +2
 
@@ -218,7 +220,7 @@ A {cluster-administrator} must give {cluster-developer}s administrative privileg
 
 . Navigate to the 3scale console.
 +
-NOTE: When navigating to 3scale, choose to *Authenticate through Red Hat Single Sign-On* when prompted to *Log in to your Account*.
+NOTE: When navigating to 3scale, choose *Authenticate through Red Hat Single Sign-On* when prompted to *Log in to your Account*.
 
 . Navigate to *Account Settings* by clicking the gear icon in the top right of the page.
 
@@ -320,7 +322,7 @@ For example, {suffix-example}
 
 * As a {cluster-administrator} you can perform all the tasks described in link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/administering_a_cluster/index[Administering an OpenShift Dedicated cluster].
 +
-NOTE: This release of {PRODUCT} does not support the task described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/getting_started/index[Getting started with OpenShift Dedicated 4].  If you would like to request a change to your cluster that is described in that guide, open a support case on the link:https://access.redhat.com/support/[Red Hat Customer Portal].
+NOTE: This release of {PRODUCT} does not support the tasks described in the link:https://access.redhat.com/documentation/en-us/openshift_dedicated/4/html-single/getting_started/index[Getting started with OpenShift Dedicated 4].  If you would like to request a change to your cluster that is described in that guide, open a support case on the link:https://access.redhat.com/support/[Red Hat Customer Portal].
 
 * A {cluster-administrator} is also an administrator of 3scale and can perform the tasks described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/{three-scale-version}/html/admin_portal_guide/index[Admin Portal Guide].
 
@@ -364,7 +366,7 @@ NOTE: You must complete the *1 - Connecting applications using asynchronous mess
 . Perform the *3 - Low-code API development and SaaS integration* Solution Pattern to learn more about using Fuse Online with external services.
 
 . Perform the *4 - Protecting APIs using 3scale API Management Platform* Solution Pattern to learn about protecting APIs with {three-scale-name}.
-When navigating to 3scale, choose to *Authenticate through Red Hat Single Sign-On* when prompted to *Log in to your Account*.
+When navigating to 3scale, choose *Authenticate through Red Hat Single Sign-On* when prompted to *Log in to your Account*.
 +
 NOTE: To complete this Solution Pattern, a {cluster-administrator} must give you 3scale administrative privileges as described in the link:https://access.redhat.com/documentation/en-us/red_hat_3scale_api_management/2.8/html/admin_portal_guide/inviting-users-managing-rights#give_new_users_rights[3scale Admin Portal Guide].
 
